@@ -34,3 +34,36 @@ AI_RESUME_ANALYZER/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+
+## Day 2 — Resume Skill Extraction
+
+Added basic resume skill extraction.
+
+### What it does
+
+* Converts resume text to lowercase.
+* Searches for known technical skills.
+* Returns the detected skills as a list.
+
+### Pipeline
+
+```text
+PDF → Text Extraction → Skill Extraction → Skills List
+```
+
+### Example
+
+```text
+Input:
+"Experience with Python, PyTorch and SQL"
+
+Output:
+["python", "sql", "pytorch"]
+```
+
+### Current Limitation
+
+Uses keyword matching, so it may miss skills written using abbreviations, synonyms, or descriptions.
+
+**Day 2 complete:** Basic resume skill extraction implemented and tested.
